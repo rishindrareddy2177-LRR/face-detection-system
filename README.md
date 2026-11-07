@@ -20,3 +20,8 @@ Python, OpenCV, NumPy, Streamlit
     python -m streamlit run app.py
 
 Put your own photo in a folder called `sample_images` and change the file name inside `detect.py`.
+
+
+## Links
+- Live app: [Face Detection App](https://face-detection-system-cz53qucgctam5cxqgnek86.streamlit.app/)
+- Source code: [GitHub repository](https://github.com/rishindrareddy2177-LRR/face-detection-system)
