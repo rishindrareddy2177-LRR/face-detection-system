@@ -5,10 +5,14 @@ import streamlit as st
 
 st.title("Face Detection System")
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 face_cascade = cv2.CascadeClassifier(
-    cv2.data.haarcascades + "haarcascade_frontalface_default.xml"
+    os.path.join(BASE_DIR, "models", "haarcascade_frontalface_default.xml")
 )
 
+if face_cascade.empty():
+    st.error("Could not load the face detector file.")
+    st.stop()
 min_neighbors = st.slider("Strictness (minNeighbors)", 1, 10, 5)
 
 uploaded_file = st.file_uploader("Upload Image", type=["jpg", "jpeg", "png"])
